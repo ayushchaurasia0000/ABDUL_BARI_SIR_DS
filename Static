@@ -1,0 +1,21 @@
+#include<bits/stdc++.h>
+
+using namespace std;
+
+int fun(int i)
+{
+static int x; // this stores the value and not delete it. Static also means 0
+if(i>0)
+{
+x++;
+return (fun(i-1) + x);
+}
+return 0;
+}
+
+
+int main()
+{
+int a=2;
+std::cout<<fun(a);
+}
